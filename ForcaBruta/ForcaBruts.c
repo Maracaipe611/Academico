@@ -4,7 +4,7 @@
 
 static const char alfabeto[] =
 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%¨&*()_+{}?:^`´[]~";
-static const char senha[] = "mL@12";
+static const char senha[] = "Lu";
 
 
 static const int alfabetoTam = sizeof(alfabeto) - 1;
@@ -43,6 +43,6 @@ void sequenciaBruta(int tamLimite)
 
 int main(void)
 {
-    sequenciaBruta(5); //definir tamanho máximo de combinações
+    sequenciaBruta(2); //definir tamanho máximo de combinações
     return 0;
 }

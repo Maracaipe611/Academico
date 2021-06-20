@@ -220,7 +220,7 @@ void preencherProximaCasa()
                         int futuraJogadaX = i + possiveisJogadas[k][l];
                         int futuraJogadaY = j + possiveisJogadas[k][l + 1];
 
-                        if(maiorValor == 60)
+                        if(maiorValor == 54)
                         {
                             imprimirMatrizCondenada(pontosCondenados);
                             exit(0);
@@ -277,6 +277,5 @@ int main()
 
     printf("\n");
     imprimirMatriz();
-
     return 0;
 }
