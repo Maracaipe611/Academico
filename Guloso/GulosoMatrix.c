@@ -274,10 +274,7 @@ int valorTotalEntreAsCasas(char primeiraCasa, char segundaCasa)
         coordenadasAtuaisHorizontais = primeiraCasaCoordenadas[1] + 1;
         totalizarCaminhoEntrePontos = totalizarCaminhoEntrePontos + menorValorHorizontal;
         
-        if(coordenadasAtuaisVerticais != segundaCasaCoordenadas[0] && coordenadasAtuaisHorizontais != segundaCasaCoordenadas[1])
-        {
-            goto buscarCasa;
-        }
+        
     }else if(primeiraCasaCoordenadas[0] < 3 && primeiraCasaCoordenadas[1] <= 2){
 
         menorValorVertical = calcularDistanciaEntreDuasCidades(cidades[coordenadasAtuaisVerticais][coordenadasAtuaisHorizontais], cidades[primeiraCasaCoordenadas[0] + 1][primeiraCasaCoordenadas[1]]); //qual o resultado da distancia entre a casa atual e a proxima casa
@@ -286,9 +283,11 @@ int valorTotalEntreAsCasas(char primeiraCasa, char segundaCasa)
 
         coordenadasAtuaisVerticais = primeiraCasaCoordenadas[0] + 1;
         totalizarCaminhoEntrePontos = totalizarCaminhoEntrePontos + menorValorVertical;
-    }else
+    }
+
+    if(coordenadasAtuaisVerticais != segundaCasaCoordenadas[0] && coordenadasAtuaisHorizontais != segundaCasaCoordenadas[1])
     {
-        printf("Uma das casas está no limite da coordenada");
+        goto buscarCasa;
     }
 
     return totalizarCaminhoEntrePontos;
